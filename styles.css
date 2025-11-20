@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.paper {
+    height: 100vh;
+    display: grid;
+}
+.paper-fold:nth-child(1) {
+    background-color: red;
+    transform-origin: 50% 100%;
+}
+.paper-fold:nth-child(2) {
+    background-color: green;
+}
+.paper-fold:nth-child(3) {
+    background-color: blue;
+    transform-origin: 50% 0%;
+}
