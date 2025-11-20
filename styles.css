@@ -42,3 +42,14 @@ body {
     transform-origin: 50% 0%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
+
+.paper-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    padding: 3rem;
+}
