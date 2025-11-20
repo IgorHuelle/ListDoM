@@ -1,8 +1,16 @@
 const paper = document.querySelector('.paper');
+const paperText = document.querySelector('.paper-text');
 const upperFold = document.querySelector('.paper-fold:nth-child(1)');
 const lowerFold = document.querySelector('.paper-fold:nth-child(3)');
 
+gsap.registerPlugin(SplitText);
+
 let canOpen = false
+
+let textSplit = SplitText.create(paperText, {
+    type: "words lines",
+    mask: "lines"
+});
 
 const openTl = gsap.timeline();
 openTl.pause();
@@ -15,6 +23,10 @@ gsap.set(paper, {
     rotate: 10,
     scale: .9
 })
+
+// gsap.set(paperText, {
+//     opacity: 0
+// })
 
 gsap.from(paper, {
     yPercent: 100,
@@ -39,6 +51,9 @@ openTl.to(upperFold, {
     scale: 1,
     rotate: 0,
     width: "100dvw"
+}).from(textSplit.words, {
+    yPercent: 100,
+    stagger: .02
 });
 
 // tl.from(paper, {

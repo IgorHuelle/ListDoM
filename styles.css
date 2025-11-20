@@ -1,3 +1,7 @@
+@font-face {
+    font-family: FleurDeLeah;
+    src: url(fonts/FleurDeLeah.ttf);
+}
 :root {
     --clr-paper: hsl(0, 0%, 98%);
 }
@@ -6,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: FleurDeLeah, sans-serif;
 }
 html {
     overflow: clip;
