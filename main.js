@@ -2,15 +2,14 @@ const paper = document.querySelector('.paper');
 const upperFold = document.querySelector('.paper-fold:nth-child(1)');
 const lowerFold = document.querySelector('.paper-fold:nth-child(3)');
 
-gsap.set(paper, {
+const tl = gsap.timeline();
+
+tl.from(paper, {
+    yPercent: 100,
     scale: .8,
     rotate: 20
-})
-
-gsap.set(upperFold, {
+}).from(upperFold, {
     rotateX: "179deg" 
-});
-
-gsap.set(lowerFold, {
+}).from(lowerFold, {
     rotateX: "179deg"
 });

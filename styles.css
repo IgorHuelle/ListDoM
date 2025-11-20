@@ -1,3 +1,7 @@
+:root {
+    --clr-paper: hsl(0, 0%, 98%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@ html {
 
 body {
     height: 100dvh;
+    background-color: hsl(0 0% 5%);
     /* justify-items: center;
     align-content: center; */
 }
@@ -17,14 +22,14 @@ body {
     display: grid;
 }
 .paper-fold:nth-child(1) {
-    background-color: red;
+    background-color: var(--clr-paper);
     transform-origin: 50% 100%;
     z-index: 1;
 }
 .paper-fold:nth-child(2) {
-    background-color: green;
+    background-color: var(--clr-paper);
 }
 .paper-fold:nth-child(3) {
-    background-color: blue;
+    background-color: var(--clr-paper);
     transform-origin: 50% 0%;
 }
