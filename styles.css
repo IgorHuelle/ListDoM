@@ -19,12 +19,20 @@ body {
 }
 .paper {
     height: 100dvh;
+    width: 90dvw;
     display: grid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    /* aspect-ratio: 9 / 19.5; */
 }
 .paper-fold:nth-child(1) {
     background-color: var(--clr-paper);
     transform-origin: 50% 100%;
     z-index: 1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .paper-fold:nth-child(2) {
     background-color: var(--clr-paper);
@@ -32,4 +40,5 @@ body {
 .paper-fold:nth-child(3) {
     background-color: var(--clr-paper);
     transform-origin: 50% 0%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
