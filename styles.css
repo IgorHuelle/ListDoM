@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    overflow: clip;
+}
+
+body {
+    height: 100dvh;
+    /* justify-items: center;
+    align-content: center; */
+}
 .paper {
     height: 100dvh;
     display: grid;
