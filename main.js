@@ -1,6 +1,7 @@
 const decoration = document.querySelector('.decoration');
 const cover = document.querySelector('.cover');
 const paper = document.querySelector('.paper');
+const glow = document.querySelector('.paper-glow');
 const paperText = document.querySelector('.paper-text');
 const upperFold = document.querySelector('.paper-fold:nth-child(1)');
 const lowerFold = document.querySelector('.paper-fold:nth-child(3)');
@@ -38,9 +39,13 @@ document.fonts.ready.then(() => {
 
     gsap.from(paper, {
         yPercent: 100,
-        duration: 1.5,
+        duration: 2,
+        ease: "power1.inOut",
         onComplete: () => {
             canOpen = true
+            gsap.to(glow, {
+                width: "150vw"
+            })
         }
     })
 

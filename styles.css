@@ -90,3 +90,15 @@ body {
     rotate: 180deg;
     scale: .45;
 }
+
+.paper-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    aspect-ratio: 1 / 1;
+    width: 0%;
+    background-image: radial-gradient(hsl(346 59% 57% / .5), transparent 60%);
+    border-radius: 50%;
+    z-index: -1;
+}
