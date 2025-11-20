@@ -2,6 +2,10 @@
     font-family: FleurDeLeah;
     src: url(fonts/FleurDeLeah.ttf);
 }
+@font-face {
+    font-family: DancingScript;
+    src: url(fonts/DancingScript.ttf);
+}
 :root {
     --clr-paper: hsl(0, 0%, 98%);
 }
@@ -10,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: FleurDeLeah, sans-serif;
+    font-family: DancingScript, sans-serif;
 }
 html {
     overflow: clip;
@@ -59,7 +63,12 @@ body {
     height: inherit;
     padding-inline-start: 1rem;
     padding-block: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    overflow: auto;
+    scrollbar-width: none;
+}
+.paper-text > p {
+    margin-bottom: 32px;
 }
 
 .cover {

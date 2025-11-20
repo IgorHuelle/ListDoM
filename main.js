@@ -10,11 +10,19 @@ gsap.registerPlugin(SplitText);
 document.fonts.ready.then(() => {
     cover.style.display = "none";
 
-    let canOpen = false
-    let textSplit = SplitText.create(paperText, {
+    const splitOptions = {
         type: "words lines",
         mask: "lines"
-    });
+    }
+
+    let canOpen = false
+
+    let headingSplit = SplitText.create(paperText.querySelector('p:nth-child(1)'), splitOptions);
+    let firstSplit = SplitText.create(paperText.querySelector('p:nth-child(2)'), splitOptions);
+    let secondSplit = SplitText.create(paperText.querySelector('p:nth-child(3)'), splitOptions);
+    let thirdSplit = SplitText.create(paperText.querySelector('p:nth-child(4)'), splitOptions);
+    let forthSplit = SplitText.create(paperText.querySelector('p:nth-child(5)'), splitOptions);
+    let lastSplit = SplitText.create(paperText.querySelector('p:nth-child(6)'), splitOptions);
 
     const openTl = gsap.timeline();
     openTl.pause();
@@ -53,8 +61,29 @@ document.fonts.ready.then(() => {
         scale: 1,
         rotate: 0,
         width: "100dvw",
-    }).from(textSplit.words, {
+    }).from(headingSplit.words, {
         yPercent: 100,
-        stagger: .02
+        stagger: .02,
+        delay: .5
+    }).from(firstSplit.words, {
+        yPercent: 100,
+        stagger: .02,
+        delay: .5
+    }).from(secondSplit.words, {
+        yPercent: 100,
+        stagger: .02,
+        delay: .5
+    }).from(thirdSplit.words, {
+        yPercent: 100,
+        stagger: .02,
+        delay: .5
+    }).from(forthSplit.words, {
+        yPercent: 100,
+        stagger: .02,
+        delay: .5
+    }).from(lastSplit.words, {
+        yPercent: 100,
+        stagger: .02,
+        delay: .5
     });
 });
