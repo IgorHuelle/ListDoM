@@ -23,7 +23,7 @@
     src: url(fonts/Allura.ttf);
 }
 :root {
-    --clr-paper: hsl(0, 0%, 98%);
+    --clr-paper: hsl(33, 73%, 97%);
 }
 
 * {
@@ -53,20 +53,20 @@ body {
 
     /* aspect-ratio: 9 / 19.5; */
 }
-.paper-fold:nth-child(1) {
+.paper-fold {
     background-color: var(--clr-paper);
+}
+.paper-fold:nth-child(1) {
     transform-origin: 50% 100%;
     z-index: 1;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
     position: relative;
-}
-.paper-fold:nth-child(2) {
-    background-color: var(--clr-paper);
+    border-radius: 32px 32px 0 0;
 }
 .paper-fold:nth-child(3) {
-    background-color: var(--clr-paper);
     transform-origin: 50% 0%;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 32px 32px;
 }
 
 .paper-text {
@@ -82,6 +82,7 @@ body {
     font-size: 1.25rem;
     overflow: auto;
     scrollbar-width: none;
+    margin-block: 16px;
 }
 .paper-text > p {
     margin-bottom: 32px;
@@ -104,7 +105,7 @@ body {
     left: 50%;
     translate: -50% -50%;
     rotate: 180deg;
-    scale: .45;
+    scale: .3;
 }
 
 .paper-glow {
@@ -117,4 +118,10 @@ body {
     background-image: radial-gradient(hsl(346 59% 57% / .5), transparent 60%);
     border-radius: 50%;
     z-index: -1;
+}
+
+.roses {
+    justify-self: right;
+    margin-top: -100px;
+    margin-right: 40px;
 }

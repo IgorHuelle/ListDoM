@@ -1,4 +1,5 @@
 const decoration = document.querySelector('.decoration');
+const roses = document.querySelector('.roses');
 const cover = document.querySelector('.cover');
 const paper = document.querySelector('.paper');
 const glow = document.querySelector('.paper-glow');
@@ -57,7 +58,8 @@ document.fonts.ready.then(() => {
     });
 
     openTl.to(upperFold, {
-        rotateX: 0
+        rotateX: 0,
+        boxShadow: "0 0 2px rgba(0, 0, 0, 0.2)"
     }).add(() => {
         decoration.style.display = "none"
     }, "<25%").to(lowerFold, {
@@ -90,5 +92,7 @@ document.fonts.ready.then(() => {
         yPercent: 100,
         stagger: .02,
         delay: .5
+    }).from(roses, {
+        opacity: 0
     });
 });
