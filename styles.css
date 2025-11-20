@@ -6,6 +6,22 @@
     font-family: DancingScript;
     src: url(fonts/DancingScript.ttf);
 }
+@font-face {
+    font-family: AlexBrush;
+    src: url(fonts/AlexBrush.ttf);
+}
+@font-face {
+    font-family: PuppiesPlay;
+    src: url(fonts/PuppiesPlay.ttf);
+}
+@font-face {
+    font-family: Whisper;
+    src: url(fonts/Whisper.ttf);
+}
+@font-face {
+    font-family: Allura;
+    src: url(fonts/Allura.ttf);
+}
 :root {
     --clr-paper: hsl(0, 0%, 98%);
 }
@@ -14,7 +30,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: DancingScript, sans-serif;
+    font-family: Allura, sans-serif;
 }
 html {
     overflow: clip;
